@@ -95,7 +95,7 @@ public class TypeManager : MonoBehaviour {
             {
                 command = command.Substring(0, command.Length - 1);
             }
-            else if (c == '\n')
+            else if (c == '\r')
             {
                 ProcessCommand(command);
                 command = "";
