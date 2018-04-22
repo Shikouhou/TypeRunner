@@ -95,7 +95,7 @@ public class TypeManager : MonoBehaviour {
             {
                 command = command.Substring(0, command.Length - 1);
             }
-            else if (c == '\n' || c == '\r')
+            else if (c == '\n')
             {
                 ProcessCommand(command);
                 command = "";
@@ -107,6 +107,7 @@ public class TypeManager : MonoBehaviour {
                 character.GetComponent<AudioSource>().PlayOneShot(character.GetComponent<CharacterController>().keyboard);
                 character.GetComponent<AudioSource>().pitch = 1;
             }
+
             currentChar = c;
 
 
