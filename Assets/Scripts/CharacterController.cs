@@ -41,15 +41,19 @@ public class CharacterController : MonoBehaviour {
         }
         else if (level > 2 && level <= 4)
         {
-            walkSpeed *= 1.1f;
+            walkSpeed *= 1.2f;
         }
         else if (level > 4 && level <= 8)
         {
-            walkSpeed *= 1.25f;
+            walkSpeed *= 1.3f;
         }
-        else if (level > 8)
+        else if (level > 6 && level <= 10)
         {
             walkSpeed *= 1.4f;
+        }
+        else if (level > 10)
+        {
+            walkSpeed *= 1.5f;
         }
 	}
 	

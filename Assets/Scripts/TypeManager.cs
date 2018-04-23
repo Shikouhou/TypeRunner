@@ -89,16 +89,21 @@ public class TypeManager : MonoBehaviour {
             StopAllCoroutines();
         }
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ProcessCommand(command);
+            command = "";
+        }
+
         foreach (char c in Input.inputString)
         {
             if (c == '\b')
             {
                 command = command.Substring(0, command.Length - 1);
             }
-            else if (c == '\r')
+            else if (c == '\r' || c == '\n')
             {
-                ProcessCommand(command);
-                command = "";
+                continue;
             }
             else
             {
